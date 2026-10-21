@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CederDev</title>
+<meta name="description" content="Apps and games by Magnus Cederberg.">
+<link rel="icon" href="images/timeduel-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  /* Same Neon Arcade look as the Time Duel pages. One dark theme by choice. */
+  :root {
+    --bg: #0b0620; --panel: #1a1142; --ink: #f3eeff; --muted: #b8acdf; --rule: #3a2e70;
+    --cyan: #22f2ff; --magenta: #ff3df2; --yellow: #ffe14d;
+    --font-display: "Bungee", "Arial Black", Impact, sans-serif;
+    --font-body: "Nunito", -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; color: var(--ink); font: 400 17px/1.55 var(--font-body);
+    background:
+      radial-gradient(600px 420px at 10% -10%, rgba(82,34,184,.6), transparent 70%),
+      radial-gradient(600px 420px at 110% 105%, rgba(163,18,122,.5), transparent 70%), var(--bg);
+    padding: 48px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px));
+  }
+  main { max-width: 40rem; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+  h1 { margin: 0; font: 400 clamp(36px, 10vw, 56px)/1 var(--font-display); }
+  h1 span { color: var(--magenta); text-shadow: 0 0 18px rgba(255,61,242,.55); }
+  .lead { margin: 10px 0 0; color: var(--muted); }
+  .label { font: 500 12px/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .app { display: flex; gap: 16px; align-items: center; text-decoration: none; color: inherit;
+         background: var(--panel); border: 1px solid var(--rule); border-radius: 20px; padding: 16px;
+         box-shadow: 0 0 30px rgba(34,242,255,.12); transition: border-color .15s, box-shadow .15s; }
+  .app:hover, .app:focus-visible { border-color: var(--cyan); box-shadow: 0 0 30px rgba(34,242,255,.35); outline: none; }
+  .app img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+  .app h2 { margin: 0 0 4px; font: 400 20px/1.15 var(--font-display); color: var(--cyan); }
+  .app p { margin: 0; color: var(--muted); font-size: 15px; }
+  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 18px; }
+  footer a { color: var(--cyan); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Ceder<span>Dev</span></h1>
+    <p class="lead">Apps and games by Magnus Cederberg, made in Sweden.</p>
+  </header>
+
+  <section aria-labelledby="apps">
+    <p class="label" id="apps">Apps</p>
+    <a class="app" href="timeduel/">
+      <img src="images/timeduel-icon.png" alt="">
+      <div>
+        <h2>Time Duel: Which Came First</h2>
+        <p>A timeline trivia game for iPhone. Two things, one tap: which came first? Daily challenges and duels with friends.</p>
+      </div>
+    </a>
+  </section>
+
+  <footer>
+    Contact: <a href="mailto:mcederberg90@gmail.com">mcederberg90@gmail.com</a> ·
+    <a href="timeduel/privacy.html">Time Duel privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>
