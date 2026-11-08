@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comet Road: a space racer for iPhone</title>
+<meta name="description" content="Comet Road is an arcade space racer for iPhone. Fly a ship down a road of floating tiles, jump the gaps and switch between blue and orange to stay on the track.">
+<meta property="og:title" content="Comet Road">
+<meta property="og:description" content="Fly down a road of floating tiles, jump the gaps and switch phase to stay alive. 100 levels, a new track every day and endless unique tracks.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/icon-512.png">
+<meta name="theme-color" content="#0a0d1c">
+<!-- When the app is live, add: <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID"> -->
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="32" height="32">COMET ROAD</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./" aria-current="page">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <h1>COMET <span class="b">RO</span><span class="o">AD</span></h1>
+        <p class="lede">Fly a ship down a road of floating tiles through deep space. Steer, jump the gaps, and switch between blue and orange to land on the right tiles. One mistake and you're stardust.</p>
+        <div class="cta">
+          <!-- Replace with the official "Download on the App Store" badge and your app link once the app is live. -->
+          <a class="store-badge" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.5c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.52zM14.2 6.03c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>
+            <span><small>Coming soon to the</small>App Store</span>
+          </a>
+          <span class="ghost">Free to play on iPhone</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/icon-512.png" alt="The Comet Road ship, half blue and half orange, on a tiled road in space under a ringed planet" width="512" height="512">
+      </div>
+    </div>
+    <div class="track" aria-hidden="true"></div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>WHAT'S ON THE ROAD</h2>
+      <div class="grid">
+        <div class="card"><h3>100 LEVELS</h3><p>Twelve hand-built levels to learn the ropes, then 88 more that get faster, narrower and meaner. Every player gets the same tracks, so times are comparable.</p></div>
+        <div class="card"><h3>TODAY'S TRACK</h3><p>A brand new track every day at midnight. Same one for everyone, so you can race your friends for the best time.</p></div>
+        <div class="card"><h3>UNIQUE TRACKS</h3><p>Generate a track nobody has flown before. Each one gets its own six-character code, and there are billions of them.</p></div>
+        <div class="card"><h3>TOUCH OR CONTROLLER</h3><p>Play with on-screen controls, or connect a game controller or keyboard. No account, no sign-in, no internet needed to play.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="card phase">
+        <div>
+          <h2>SWITCH PHASE TO SURVIVE</h2>
+          <p>Your ship is either <span class="dot b"></span>blue or <span class="dot o"></span>orange, and it only lands on tiles of its own color. Grey tiles take anyone.</p>
+          <p>Flip phase at the right moment, mid-jump if you have to, and the road opens up. Flip too late and you fall straight through.</p>
+        </div>
+        <div class="tiles" aria-hidden="true">
+          <i></i><i class="b"></i><i class="b"></i><i class="x"></i><i class="o"></i><i></i>
+          <i></i><i class="b"></i><i class="x"></i><i class="o"></i><i class="o"></i><i></i>
+          <i></i><i class="x"></i><i class="b"></i><i class="o"></i><i class="x"></i><i></i>
+          <i></i><i class="b"></i><i class="b"></i><i class="o"></i><i class="o"></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>&copy; 2026 Magnus Cederberg · <a href="../">More from CederDev</a></span>
+    <nav aria-label="Footer">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of use</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
