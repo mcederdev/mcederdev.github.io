@@ -3,9 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>MCEDERDEV</title>
-<meta name="description" content="Apps and games by Magnus Cederberg.">
-<link rel="icon" href="images/timeduel-icon.png">
+<title>MCederDev · Apps and games by Magnus Cederberg</title>
+<meta name="description" content="Apps and games for iPhone by Magnus Cederberg, made in Sweden: Time Duel, Comet Road and Otonagi.">
+<meta name="theme-color" content="#0b0620">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="canonical" href="https://mcederdev.github.io/">
+
+<!-- Link preview in Messages, Slack, social media -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MCederDev">
+<meta property="og:title" content="MCederDev · Apps and games by Magnus Cederberg">
+<meta property="og:description" content="Time Duel, Comet Road and Otonagi. Apps and games for iPhone, made in Sweden.">
+<meta property="og:url" content="https://mcederdev.github.io/">
+<meta property="og:image" content="https://mcederdev.github.io/images/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MCederDev logo with the Time Duel, Comet Road and Otonagi app icons">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&family=JetBrains+Mono:wght@500&display=swap">
@@ -23,24 +40,39 @@
   body {
     margin: 0; min-height: 100vh; color: var(--ink); font: 400 17px/1.55 var(--font-body);
     background:
-      radial-gradient(600px 420px at 10% -10%, rgba(82,34,184,.6), transparent 70%),
-      radial-gradient(600px 420px at 110% 105%, rgba(163,18,122,.5), transparent 70%), var(--bg);
-    padding: 48px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px));
+      radial-gradient(700px 480px at 10% -10%, rgba(82,34,184,.6), transparent 70%),
+      radial-gradient(700px 480px at 110% 105%, rgba(163,18,122,.5), transparent 70%), var(--bg);
+    padding: 56px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px));
   }
-  main { max-width: 40rem; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
-  h1 { margin: 0; font: 400 clamp(36px, 10vw, 56px)/1 var(--font-display); }
+  main { max-width: 68rem; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+  h1 { margin: 0; font: 400 clamp(36px, 10vw, 64px)/1 var(--font-display); }
   h1 span { color: var(--magenta); text-shadow: 0 0 18px rgba(255,61,242,.55); }
-  .lead { margin: 10px 0 0; color: var(--muted); }
-  .label { font: 500 12px/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-  .app { display: flex; gap: 16px; align-items: center; text-decoration: none; color: inherit;
-         background: var(--panel); border: 1px solid var(--rule); border-radius: 20px; padding: 16px;
-         box-shadow: 0 0 30px rgba(34,242,255,.12); transition: border-color .15s, box-shadow .15s; }
-  .app:hover, .app:focus-visible { border-color: var(--cyan); box-shadow: 0 0 30px rgba(34,242,255,.35); outline: none; }
-  .app + .app { margin-top: 14px; }
-  .app img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
-  .app h2 { margin: 0 0 4px; font: 400 20px/1.15 var(--font-display); color: var(--cyan); }
-  .app p { margin: 0; color: var(--muted); font-size: 15px; }
-  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 18px; }
+  .lead { margin: 12px 0 0; color: var(--muted); font-size: 18px; }
+  .label { margin: 0 0 14px; font: 500 12px/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+  .app { --c: var(--cyan); --glow: rgba(34,242,255,.35);
+         display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: inherit;
+         background: var(--panel); border: 1px solid var(--rule); border-radius: 22px; padding: 22px;
+         box-shadow: 0 0 30px color-mix(in srgb, var(--glow) 35%, transparent);
+         transition: border-color .15s, box-shadow .15s, transform .15s; }
+  .app:hover, .app:focus-visible { border-color: var(--c); box-shadow: 0 0 36px var(--glow); transform: translateY(-3px); outline: none; }
+  .app.timeduel { --c: #ff3df2; --glow: rgba(255,61,242,.4); }
+  .app.comet    { --c: #ff9a3d; --glow: rgba(255,154,61,.4); }
+  .app.otonagi  { --c: #8fd3e8; --glow: rgba(143,211,232,.35); }
+  .app .top { display: flex; align-items: center; gap: 16px; }
+  .app img { width: 76px; height: 76px; border-radius: 18px; flex: none;
+             box-shadow: 0 8px 24px color-mix(in srgb, var(--glow) 70%, transparent); }
+  .tag { display: inline-block; font: 500 11px/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase;
+         color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); border-radius: 999px; padding: 6px 10px; }
+  .app h2 { margin: 8px 0 0; font: 400 20px/1.15 var(--font-display); color: var(--c); }
+  .app p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
+  .more { font-weight: 800; font-size: 15px; color: var(--ink); }
+  .more::after { content: " →"; color: var(--c); }
+
+  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 18px;
+           display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
   footer a { color: var(--cyan); }
 </style>
 </head>
@@ -53,34 +85,51 @@
 
   <section aria-labelledby="apps">
     <p class="label" id="apps">Apps</p>
-    <a class="app" href="timeduel/">
-      <img src="images/timeduel-icon.png" alt="">
-      <div>
-        <h2>Time Duel: Which Came First</h2>
+    <div class="apps">
+      <a class="app timeduel" href="timeduel/">
+        <div class="top">
+          <img src="images/timeduel-icon.png" alt="Time Duel app icon">
+          <div>
+            <span class="tag">Trivia game</span>
+            <h2>Time Duel: Which Came First</h2>
+          </div>
+        </div>
         <p>A timeline trivia game for iPhone. Two things, one tap: which came first? Daily challenges and duels with friends.</p>
-      </div>
-    </a>
-    <a class="app" href="comet-road/">
-      <img src="images/comet-road-icon.png" alt="">
-      <div>
-        <h2>Comet Road</h2>
+        <span class="more">See Time Duel</span>
+      </a>
+      <a class="app comet" href="comet-road/">
+        <div class="top">
+          <img src="images/comet-road-icon.png" alt="Comet Road app icon">
+          <div>
+            <span class="tag">Arcade racer</span>
+            <h2>Comet Road</h2>
+          </div>
+        </div>
         <p>An arcade space racer for iPhone. Fly down a road of floating tiles, jump the gaps and switch between blue and orange to stay on the track.</p>
-      </div>
-    </a>
-    <a class="app" href="otonagi/">
-      <img src="images/otonagi-icon.png" alt="">
-      <div>
-        <h2>Otonagi</h2>
+        <span class="more">See Comet Road</span>
+      </a>
+      <a class="app otonagi" href="otonagi/">
+        <div class="top">
+          <img src="images/otonagi-icon.png" alt="Otonagi app icon">
+          <div>
+            <span class="tag">Calm music</span>
+            <h2>Otonagi</h2>
+          </div>
+        </div>
         <p>A calm music app for iPhone. Gentle, never-repeating Japanese-inspired music with rain, waves and other nature sounds, composed live on the phone.</p>
-      </div>
-    </a>
+        <span class="more">See Otonagi</span>
+      </a>
+    </div>
   </section>
 
   <footer>
-    Contact: <a href="mailto:mcederdev@gmail.com">mcederdev@gmail.com</a> ·
-    <a href="timeduel/privacy.html">Time Duel privacy policy</a> ·
-    <a href="comet-road/privacy.html">Comet Road privacy policy</a> ·
-    <a href="otonagi/privacy.html">Otonagi privacy policy</a>
+    <nav>
+      <a href="mailto:mcederdev@gmail.com">mcederdev@gmail.com</a>
+      <a href="timeduel/privacy.html">Time Duel privacy policy</a>
+      <a href="comet-road/privacy.html">Comet Road privacy policy</a>
+      <a href="otonagi/privacy.html">Otonagi privacy policy</a>
+    </nav>
+    <span>© 2026 Magnus Cederberg</span>
   </footer>
 </main>
 </body>
