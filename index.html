@@ -56,7 +56,8 @@
          background: var(--panel); border: 1px solid var(--rule); border-radius: 22px; padding: 22px;
          box-shadow: 0 0 30px color-mix(in srgb, var(--glow) 35%, transparent);
          transition: border-color .15s, box-shadow .15s, transform .15s; }
-  .app:hover, .app:focus-visible { border-color: var(--c); box-shadow: 0 0 36px var(--glow); transform: translateY(-3px); outline: none; }
+  .app { position: relative; }
+  .app:hover, .app:focus-within { border-color: var(--c); box-shadow: 0 0 36px var(--glow); transform: translateY(-3px); outline: none; }
   .app.timeduel { --c: #ff3df2; --glow: rgba(255,61,242,.4); }
   .app.comet    { --c: #ff9a3d; --glow: rgba(255,154,61,.4); }
   .app.otonagi  { --c: #8fd3e8; --glow: rgba(143,211,232,.35); }
@@ -67,7 +68,13 @@
          color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); border-radius: 999px; padding: 6px 10px; }
   .app h2 { margin: 8px 0 0; font: 400 20px/1.15 var(--font-display); color: var(--c); }
   .app p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
-  .more { font-weight: 800; font-size: 15px; color: var(--ink); }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+  .more { font-weight: 800; font-size: 15px; color: var(--ink); text-decoration: none; outline: none; }
+  .more::before { content: ""; position: absolute; inset: 0; border-radius: 22px; } /* whole card is clickable */
+  .store { position: relative; z-index: 1; font-weight: 800; font-size: 14px; color: var(--bg); background: var(--c);
+           border-radius: 999px; padding: 9px 16px; text-decoration: none; box-shadow: 0 0 18px var(--glow); }
+  .store::after { content: " ↗"; }
+  .store:hover, .store:focus-visible { background: var(--ink); outline: none; }
   .more::after { content: " →"; color: var(--c); }
 
   footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 18px;
@@ -86,7 +93,7 @@
   <section aria-labelledby="apps">
     <p class="label" id="apps">Apps</p>
     <div class="apps">
-      <a class="app timeduel" href="timeduel/">
+      <article class="app timeduel">
         <div class="top">
           <img src="images/timeduel-icon.png" alt="Time Duel app icon">
           <div>
@@ -95,9 +102,11 @@
           </div>
         </div>
         <p>A timeline trivia game for iPhone. Two things, one tap: which came first? Daily challenges and duels with friends.</p>
-        <span class="more">See Time Duel</span>
-      </a>
-      <a class="app comet" href="comet-road/">
+        <div class="actions">
+          <a class="more" href="timeduel/">See Time Duel</a>
+        </div>
+      </article>
+      <article class="app comet">
         <div class="top">
           <img src="images/comet-road-icon.png" alt="Comet Road app icon">
           <div>
@@ -106,9 +115,11 @@
           </div>
         </div>
         <p>An arcade space racer for iPhone. Fly down a road of floating tiles, jump the gaps and switch between blue and orange to stay on the track.</p>
-        <span class="more">See Comet Road</span>
-      </a>
-      <a class="app otonagi" href="otonagi/">
+        <div class="actions">
+          <a class="more" href="comet-road/">See Comet Road</a>
+        </div>
+      </article>
+      <article class="app otonagi">
         <div class="top">
           <img src="images/otonagi-icon.png" alt="Otonagi app icon">
           <div>
@@ -117,8 +128,11 @@
           </div>
         </div>
         <p>A calm music app for iPhone. Gentle, never-repeating Japanese-inspired music with rain, waves and other nature sounds, composed live on the phone.</p>
-        <span class="more">See Otonagi</span>
-      </a>
+        <div class="actions">
+          <a class="more" href="otonagi/">See Otonagi</a>
+        <a class="store" href="https://apps.apple.com/app/id6826823239" aria-label="Download Otonagi on the App Store">App Store</a>
+        </div>
+      </article>
     </div>
   </section>
 
