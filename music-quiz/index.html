@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Track Night: the music quiz everyone plays on their phone</title>
-<meta name="description" content="Track Night turns any room into a music quiz night. Build a quiz from your favourite songs, play them from your own Spotify, and let teams answer artist, title and year on their phones. No download or sign-up for players.">
+<meta name="description" content="Track Night turns any room into a quiz night. Build any quiz: songs from your own Spotify, trivia, pictures and multiple choice. Teams join by scanning a QR code and answer on their phones. No download or sign-up for players.">
 <meta name="theme-color" content="#14121f">
 <link rel="canonical" href="https://mcederdev.github.io/music-quiz/">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -13,17 +13,17 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Track Night">
 <meta property="og:title" content="Track Night: host a music quiz, everyone plays on their phone">
-<meta property="og:description" content="Build a quiz from your favourite songs, play them from your own Spotify, and let teams answer artist, title and year on their phones. No download for players.">
+<meta property="og:description" content="Build any quiz: songs from your own Spotify, trivia, pictures and multiple choice. Teams scan a QR code and answer on their phones. No download for players.">
 <meta property="og:url" content="https://mcederdev.github.io/music-quiz/">
 <meta property="og:image" content="https://mcederdev.github.io/music-quiz/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Track Night app icon next to the host screen and a phone answering a song">
+<meta property="og:image:alt" content="Track Night app icon next to the TV lobby screen and a phone answering a multiple-choice question">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Track Night: host a music quiz, everyone plays on their phone">
-<meta name="twitter:description" content="Build a quiz from your favourite songs, play them from your own Spotify, and let teams answer on their phones. No download for players.">
+<meta name="twitter:description" content="Build any quiz: songs from your own Spotify, trivia, pictures and multiple choice. Teams scan a QR code and answer on their phones. No download for players.">
 <meta name="twitter:image" content="https://mcederdev.github.io/music-quiz/og-image.png">
-<meta name="twitter:image:alt" content="Track Night app icon next to the host screen and a phone answering a song">
+<meta name="twitter:image:alt" content="Track Night app icon next to the TV lobby screen and a phone answering a multiple-choice question">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,7 +39,7 @@
         <img class="icon" src="icon-512.png" alt="Track Night app icon" width="112" height="112">
         <h1>Track Night</h1>
         <p class="tagline">Host a music quiz night. Everyone plays on their phone.</p>
-        <p class="lead">Track Night turns any living room, office or pub into a music quiz. You build the quiz from your favourite songs and play them from your own Spotify, while teams join with a 4-letter code and answer artist, title and year on their phones. Answers are checked for you, or teams mark each other's sheets, and the scoreboard keeps itself.</p>
+        <p class="lead">Track Night turns any living room, office or pub into a quiz night. Make the quiz exactly how you want it: songs you play from your own Spotify, trivia questions, pictures, multiple choice, double-points rounds and countdowns. Teams scan a QR code and answer on their phones. Answers are checked for you, or teams mark each other's sheets, and the scoreboard keeps itself.</p>
         <div class="status">Coming soon · in development</div>
         <div class="stores" aria-label="Store links">
           <span class="store" role="link" aria-disabled="true" title="Not released yet">
@@ -54,7 +54,7 @@
       </div>
       <div class="hero-shots" aria-hidden="true">
         <img class="desk" src="img/lobby.webp" alt="" width="1280" height="860">
-        <div class="phone"><img src="img/player-answer.webp" alt="" width="585" height="996"></div>
+        <div class="phone"><img src="img/player-choice.webp" alt="" width="585" height="996"></div>
       </div>
     </div>
 
@@ -62,9 +62,9 @@
       <h2>How a Track Night works</h2>
       <p class="sub">One laptop or TV for the quiz master, one phone per player. Nobody needs to download anything or make an account to play.</p>
       <ol class="steps">
-        <li><span class="n">1</span><h3>Build your quiz</h3><p>Paste songs as "Artist - Title" or as Spotify links, split them into rounds like "80s hits" or "Film music", and add your own questions.</p></li>
-        <li><span class="n">2</span><h3>Teams join</h3><p>Players scan the QR code or type the 4-letter code on their phone, pick a nickname and join or start a team.</p></li>
-        <li><span class="n">3</span><h3>Play and score</h3><p>You play each song from your own Spotify. Teams answer on their phones, and after each round the answers are checked and the scoreboard updates.</p></li>
+        <li><span class="n">1</span><h3>Make your quiz</h3><p>Start from the example or from scratch. Mix songs and trivia, add pictures, choose what players answer and how many points each answer is worth.</p></li>
+        <li><span class="n">2</span><h3>Teams join in seconds</h3><p>Put the host screen on the TV. One player per team scans the QR code and taps New team; teammates scan the team code on that phone and only type their name.</p></li>
+        <li><span class="n">3</span><h3>Play and score</h3><p>You play each song from your own Spotify and the TV shows each question. Teams answer on their phones, and after each round the answers are checked and the scoreboard updates.</p></li>
       </ol>
     </section>
 
@@ -72,14 +72,22 @@
       <h2>See it in action</h2>
       <p class="sub">Screens from the current web version.</p>
       <div class="shots">
-        <figure class="shot"><img src="img/builder.webp" alt="Quiz builder with a round called The 70s and 80s holding three songs with artist, title and year" width="1280" height="860" loading="lazy"><figcaption>Build a quiz from a song list in a minute, with points and rules per quiz.</figcaption></figure>
+        <figure class="shot"><img src="img/builder.webp" alt="Quiz editor with a trivia round holding a multiple-choice question about Freddie Mercury, with Queen ticked as the right option" width="1280" height="860" loading="lazy"><figcaption>Make any quiz: songs or trivia, text, number or multiple-choice answers, pictures, points and timers.</figcaption></figure>
         <div class="row">
-          <figure class="shot"><img src="img/lobby.webp" alt="Host lobby showing the join code GVZM, a QR code and three teams" width="1280" height="860" loading="lazy"><figcaption>Players join with a code or QR. Teams appear as they arrive.</figcaption></figure>
-          <figure class="shot"><img src="img/results.webp" alt="Scoreboard after round one with three teams and a flagged answer for the host to settle" width="1280" height="860" loading="lazy"><figcaption>Scores after each round, with flagged answers for the quiz master to settle.</figcaption></figure>
+          <figure class="shot"><img src="img/quizzes.webp" alt="Your quizzes page with buttons for a new quiz, the example quiz and opening a quiz file, and a saved quiz with Host, Edit, Duplicate and Delete" width="1280" height="860" loading="lazy"><figcaption>All your quizzes in one place. Press Host and you're live.</figcaption></figure>
+          <figure class="shot"><img src="img/lobby.webp" alt="TV lobby with a big QR code, the join code and three teams with their players" width="1280" height="860" loading="lazy"><figcaption>The TV shows the QR code and every team as it arrives.</figcaption></figure>
+        </div>
+        <div class="row">
+          <figure class="shot"><img src="img/host-picture.webp" alt="TV screen showing question 4, a picture question asking which app this is the icon of" width="1280" height="860" loading="lazy"><figcaption>Picture and trivia questions show big on the TV.</figcaption></figure>
+          <figure class="shot"><img src="img/results.webp" alt="Scoreboard after round one with three teams and a flagged year answer for the quiz master to settle" width="1280" height="860" loading="lazy"><figcaption>Scores after each round, with flagged answers for the quiz master to settle.</figcaption></figure>
         </div>
         <div class="phones">
-          <figure class="shot"><div class="phone"><img src="img/player-answer.webp" alt="Phone screen where a team answers ABBA, Dancing Queen, 1977 for song 1" width="585" height="996" loading="lazy"></div><figcaption>Answer artist, title and year on any phone.</figcaption></figure>
-          <figure class="shot"><div class="phone"><img src="img/player-review.webp" alt="Phone screen where a team marks another team's answers right, half or wrong" width="585" height="996" loading="lazy"></div><figcaption>Or let teams mark each other's answers.</figcaption></figure>
+          <figure class="shot"><div class="phone"><img src="img/player-team.webp" alt="Phone showing You're in, Anna, with a QR code teammates scan to join The Rockets" width="585" height="996" loading="lazy"></div><figcaption>Your phone shows a team code for your friends to scan.</figcaption></figure>
+          <figure class="shot"><div class="phone"><img src="img/player-invited.webp" alt="Phone showing You're invited to The Rockets with a Join The Rockets button" width="585" height="996" loading="lazy"></div><figcaption>They land straight in your team and just type a name.</figcaption></figure>
+          <figure class="shot"><div class="phone"><img src="img/player-choice.webp" alt="Phone answering a multiple-choice question with Queen picked" width="585" height="996" loading="lazy"></div><figcaption>Tap an option for multiple choice.</figcaption></figure>
+          <figure class="shot"><div class="phone"><img src="img/player-answer.webp" alt="Phone answering artist ABBA, title Dancing Queen and year 1977 for song 1" width="585" height="996" loading="lazy"></div><figcaption>Or type artist, title, year, or any answer you ask for.</figcaption></figure>
+          <figure class="shot"><div class="phone"><img src="img/player-picture.webp" alt="Phone showing a picture question with four options" width="585" height="996" loading="lazy"></div><figcaption>Pictures show on every phone too.</figcaption></figure>
+          <figure class="shot"><div class="phone"><img src="img/player-review.webp" alt="Phone where a team marks another team's answers right, half or wrong" width="585" height="996" loading="lazy"></div><figcaption>Or let teams mark each other's answers.</figcaption></figure>
         </div>
       </div>
     </section>
@@ -88,12 +96,14 @@
       <h2>Made for a real quiz night</h2>
       <p class="sub">Everything a quiz master needs, and nothing players have to install.</p>
       <ul class="features">
+        <li><b>100% your quiz</b><span>Songs, trivia, pictures and multiple choice in any mix. Ask for artist, title and year, or anything else, with your own points.</span></li>
+        <li><b>Rounds your way</b><span>Name each round, give it a category, make it double or triple points, or add a countdown that locks answers by itself.</span></li>
+        <li><b>Easy team joining</b><span>Scan the TV's QR code, tap New team, and teammates scan the team code on that phone. Players can switch team in the lobby.</span></li>
         <li><b>Forgiving answer checking</b><span>Typos, "The", accents and "feat." are handled. Close calls go to you, and years within one year earn half points.</span></li>
         <li><b>Peer review mode</b><span>Each team marks the next team's sheet, and teams can flag a mark for the quiz master to decide.</span></li>
-        <li><b>Your own questions</b><span>Add questions like "Which film?" or "How many Oscars?" to any round, with their own points.</span></li>
-        <li><b>A library of quizzes</b><span>Keep as many quizzes as you like, duplicate last month's, or save one as a file to share.</span></li>
-        <li><b>Release years looked up for you</b><span>Fill in missing years from MusicBrainz, using the first release rather than the remaster.</span></li>
-        <li><b>Answers stay hidden</b><span>Players never receive the answer key, and the host screen keeps it hidden until you choose to show it.</span></li>
+        <li><b>A library of quizzes</b><span>Keep as many quizzes as you like, start from the example, duplicate last month's, or save one as a file to share.</span></li>
+        <li><b>Made for the TV</b><span>Full-screen host view with big numbers, the question and picture, a countdown, and who has answered.</span></li>
+        <li><b>Answers stay hidden</b><span>Players never receive the answer key, pictures only appear when their question starts, and the host screen hides the answer until you choose to show it.</span></li>
       </ul>
       <div class="note"><b>Why you play the music yourself.</b> Spotify's developer rules don't allow quiz games to play music through Spotify, so Track Night never connects to your Spotify account. It gives you the quiz as a playlist instead: copy the song links into a Spotify playlist, or download a list to import, and press play on each song when the host screen says so.</div>
     </section>
@@ -114,10 +124,12 @@
         </div>
       </div>
       <div style="margin-top:28px">
+        <details><summary>How do teams join?</summary><p>Everyone scans the QR code on the TV, or types the 4-letter code at the website. The first player in a team taps New team and names it. Their phone then shows a team code: teammates scan it and land straight in the team, so they only type their name.</p></details>
+        <details><summary>Does it have to be about music?</summary><p>No. A round can be all songs, all trivia, or a mix, and any question can have a picture and multiple-choice options. Songs are where Track Night shines, though.</p></details>
         <details><summary>Do players need to download an app?</summary><p>No. Players join in their phone's web browser with the 4-letter code or the QR code. An iPhone app is planned as well.</p></details>
         <details><summary>Do I need Spotify Premium?</summary><p>Track Night doesn't connect to Spotify, so you only need a way to play the quiz songs in order on your own speaker. The app exports Spotify links and a plain song list for that.</p></details>
         <details><summary>When is it out?</summary><p>Track Night is in development. The web version comes first, then the iPhone app. Email to hear when it launches.</p></details>
-        <details><summary>Where are my quizzes saved?</summary><p>In the browser you built them in. Clearing your browser data removes them, so save a quiz file to keep a copy or move it to another computer.</p></details>
+        <details><summary>Where are my quizzes saved?</summary><p>In the browser you built them in, pictures included. Clearing your browser data removes them, so save a quiz file to keep a copy or move it to another computer.</p></details>
       </div>
     </section>
   </main>
